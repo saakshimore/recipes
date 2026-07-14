@@ -1,0 +1,15 @@
+---
+layout: default
+title: Home
+---
+<ul class="recipe-list">
+  {% assign recipes = site.recipes | sort: "title" %}
+  {% for recipe in recipes %}
+  <li>
+    <a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a>
+    {% if recipe.tags and recipe.tags.size > 0 %}
+    <span class="tag-list">{{ recipe.tags | join: ", " }}</span>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,18 @@
+title: Recipes
+description: A collection of recipes I actually make
+baseurl: "/recipes"
+url: "https://saakshimore.github.io"
+
+collections:
+  recipes:
+    output: true
+    permalink: /recipes/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: recipe
+
+markdown: kramdown
